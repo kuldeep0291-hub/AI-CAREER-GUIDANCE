@@ -87,16 +87,11 @@ export function ChatInterface({ onBack }: ChatInterfaceProps) {
     if (!initialized) {
       setInitialized(true)
       setTimeout(() => {
-        addBotMessage(
-          "Let's begin! I'll ask you some questions to understand your preferences, then narrow down the best career paths for you. Answer honestly for accurate results."
-        )
-        setTimeout(() => {
-          const firstQuestion = baselineQuestions[0]
-          if (firstQuestion) {
-            setAskedQuestionIds(new Set([firstQuestion.id]))
-            addBotMessage(firstQuestion.text, firstQuestion)
-          }
-        }, 1200)
+        const firstQuestion = baselineQuestions[0]
+        if (firstQuestion) {
+          setAskedQuestionIds(new Set([firstQuestion.id]))
+          addBotMessage(firstQuestion.text, firstQuestion)
+        }
       }, 800)
     }
   }, [initialized, addBotMessage])
@@ -218,7 +213,6 @@ export function ChatInterface({ onBack }: ChatInterfaceProps) {
     setDomainScores([])
     setResult(null)
     setCurrentQuestion(null)
-    setInitialized(false)
     setMessages([
       {
         id: 'welcome-restart',
@@ -228,7 +222,6 @@ export function ChatInterface({ onBack }: ChatInterfaceProps) {
       },
     ])
     setTimeout(() => {
-      setInitialized(true)
       const firstQuestion = baselineQuestions[0]
       if (firstQuestion) {
         setAskedQuestionIds(new Set([firstQuestion.id]))
