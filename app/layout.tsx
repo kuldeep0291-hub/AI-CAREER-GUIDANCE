@@ -1,5 +1,29 @@
-/* Remove unused font variables */
+import type { Metadata } from "next"
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
 
-body {
-  font-family: var(--geist), var(--geistMono);
+export const metadata: Metadata = {
+  title: "Career Guru",
+  description: "AI-powered career guidance",
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className="antialiased">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
+  )
 }
