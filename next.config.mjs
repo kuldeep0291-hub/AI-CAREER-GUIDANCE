@@ -1,7 +1,5 @@
 // next.config.mjs
-import { defineConfig } from 'next';
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 
-export default defineConfig({
-  // Removed ignoreBuildErrors to enforce proper TypeScript checking
-  // Other existing configurations
-});
+export default nextConfig;
