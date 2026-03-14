@@ -216,13 +216,13 @@ export const domainSpecificQuestions: Record<CareerDomain, Question[]> = {
   'research': [
     { id: 'r1', text: 'How much do you enjoy reading academic papers and exploring the latest discoveries?', type: 'slider', parameter: 'I', min: -10, max: 10, minLabel: 'Not at all', maxLabel: 'Love it', targetDomains: ['research'] },
     { id: 'r2', text: 'How comfortable are you with statistical analysis and data interpretation?', type: 'slider', parameter: 'S', min: -10, max: 10, minLabel: 'Uncomfortable', maxLabel: 'Very confident', targetDomains: ['research'] },
-    { id: 'r3', text: 'How patient are you when working on long-term projects with delayed results?', type: 'slider', parameter: 'P', min: -10, max: 10, minLabel: 'Very impatient', maxLabel: 'Extremely patient', targetDomains: ['research'] },
+    { id: 'r3', text: 'How well do you handle ambiguity and uncertainty when working on open-ended research problems?', type: 'slider', parameter: 'P', min: -10, max: 10, minLabel: 'Struggle with uncertainty', maxLabel: 'Thrive in it', targetDomains: ['research'] },
     { id: 'r4', text: 'How excited are you by the prospect of contributing new knowledge to your field?', type: 'slider', parameter: 'I', min: -10, max: 10, minLabel: 'Not excited', maxLabel: 'Thrilled', targetDomains: ['research'] },
     { id: 'r5', text: 'How do you feel about the academic career path (publishing, grants, tenure)?', type: 'multiple-choice', parameter: 'D', options: ['Sounds stressful', 'Willing to do it', 'Find it motivating', 'Excited by the challenge'], targetDomains: ['research'] },
   ],
   'software-engineering': [
     { id: 's1', text: 'How much do you enjoy building things with code or technology?', type: 'slider', parameter: 'I', min: -10, max: 10, minLabel: 'Not at all', maxLabel: 'Love it', targetDomains: ['software-engineering'] },
-    { id: 's2', text: 'How comfortable are you learning new programming languages or frameworks?', type: 'slider', parameter: 'S', min: -10, max: 10, minLabel: 'Uncomfortable', maxLabel: 'Very comfortable', targetDomains: ['software-engineering'] },
+    { id: 's2', text: 'How comfortable are you writing clean, well-documented, and testable code?', type: 'slider', parameter: 'S', min: -10, max: 10, minLabel: 'Developing', maxLabel: 'Very skilled', targetDomains: ['software-engineering'] },
     { id: 's3', text: 'How do you approach debugging a difficult issue?', type: 'multiple-choice', parameter: 'P', options: ['Get frustrated and need help', 'Systematic trial and error', 'Deep dive into documentation', 'Enjoy the detective work'], targetDomains: ['software-engineering'] },
     { id: 's4', text: 'How well do you handle tight deadlines and changing requirements?', type: 'slider', parameter: 'P', min: -10, max: 10, minLabel: 'Struggle', maxLabel: 'Thrive', targetDomains: ['software-engineering'] },
     { id: 's5', text: 'How interested are you in system design and architecture decisions?', type: 'slider', parameter: 'T', min: -10, max: 10, minLabel: 'Not interested', maxLabel: 'Fascinated', targetDomains: ['software-engineering'] },
